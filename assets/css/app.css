@@ -1,0 +1,96 @@
+:root {
+    --fitlife-navy: #0B1F3A;
+    --fitlife-blue: #1D4ED8;
+    --fitlife-blue-hover: #1E40AF;
+    --fitlife-green: #22C55E;
+    --fitlife-orange: #F97316;
+    --fitlife-bg: #F3F6FB;
+    --fitlife-text: #0F172A;
+    --fitlife-muted: #475569;
+    --fitlife-shadow: 0 .45rem 1.4rem rgba(11, 31, 58, .10);
+}
+
+body {
+    background: var(--fitlife-bg);
+    color: var(--fitlife-text);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app-navbar {
+    background: var(--fitlife-navy);
+    box-shadow: 0 4px 18px rgba(11, 31, 58, .2);
+}
+
+.navbar-brand { letter-spacing: -.03em; }
+.navbar .nav-link { color: rgba(255,255,255,.82); font-size: .82rem; font-weight: 600; margin-right: .25rem; }
+.navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active { color: #fff; }
+.navbar .nav-link.active { text-decoration: underline; text-decoration-color: #60a5fa; text-underline-offset: .45rem; }
+
+.brand-mark {
+    align-items: center;
+    background: linear-gradient(135deg, #60a5fa, #22c55e);
+    border-radius: .55rem;
+    display: inline-flex;
+    height: 1.65rem;
+    justify-content: center;
+    position: relative;
+    width: 1.65rem;
+}
+
+.brand-mark::after {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    content: "";
+    height: .58rem;
+    width: .58rem;
+}
+
+.brand-mark-lg { height: 3.2rem; width: 3.2rem; border-radius: .9rem; }
+.brand-mark-lg::after { height: 1rem; width: 1rem; border-width: 3px; }
+.eyebrow { color: var(--fitlife-blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.fitlife-mini-hero { background: linear-gradient(115deg, #0B1F3A, #1d4ed8); color: #fff; height: 132px; }
+.fitlife-mini-hero-content { align-items: center; display: flex; height: 100%; }
+.fitlife-mini-hero-content span { font-size: 1.3rem; font-weight: 800; }
+
+.metric-card, .card, .feature-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--fitlife-shadow);
+}
+
+.metric-card { border: 0; border-top: 4px solid var(--fitlife-blue); }
+.metric-label { color: var(--fitlife-muted); font-size: .82rem; font-weight: 600; }
+.metric-value { color: var(--fitlife-text); font-size: 2.25rem; font-weight: 800; letter-spacing: -.06em; }
+.metric-icon { align-items: center; border-radius: .8rem; display: inline-flex; font-size: 1.25rem; height: 2.75rem; justify-content: center; width: 2.75rem; }
+.icon-blue { background: #dbeafe; color: var(--fitlife-blue); }
+.icon-orange { background: #ffedd5; color: var(--fitlife-orange); }
+.icon-purple { background: #ede9fe; color: #7c3aed; }
+
+.table thead th {
+    background: #eaf0f8;
+    border-bottom-width: 1px;
+    color: var(--fitlife-muted);
+    font-size: .7rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.table td, .table th { padding-bottom: .9rem; padding-top: .9rem; }
+.table-responsive { border-radius: 1rem; }
+.form-control, .form-select { border-color: #cbd5e1; border-radius: .7rem; }
+.form-control:focus, .form-select:focus { border-color: #93c5fd; box-shadow: 0 0 0 .25rem rgba(29, 78, 216, .12); }
+.btn { border-radius: .65rem; font-weight: 700; }
+.btn-primary { background: var(--fitlife-blue); border-color: var(--fitlife-blue); }
+.btn-primary:hover { background: var(--fitlife-blue-hover); border-color: var(--fitlife-blue-hover); }
+.auth-layout { min-height: 100vh; }
+.auth-card { border-radius: 1.25rem; }
+.empty-state { color: var(--fitlife-muted); }
+.page-toolbar { align-items: end; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+.search-control { max-width: 24rem; }
+.modal-backdrop-custom { background: rgba(11, 31, 58, .62); inset: 0; position: fixed; z-index: 1040; }
+.modal.d-block { z-index: 1050; }
+
+@media (max-width: 575.98px) {
+    .fitlife-mini-hero-content span { font-size: 1.05rem; }
+    .metric-value { font-size: 1.85rem; }
+}
